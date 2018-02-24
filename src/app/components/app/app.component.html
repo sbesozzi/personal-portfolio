@@ -1,34 +1,67 @@
 <div class="app-container">
-    <div class="ui top attached secondary menu" id="background" style="background-image:url('../../assets/images/background.jpg');">
+    <div class="ui top attached secondary stackable menu" id="background" style="background-image:url('../../assets/images/background.jpg');">
+        
        
-        <a class="item" [routerLink]="['/home']">
-            <img src="../../assets/images/sblogo.jpg">
+        <a id="logo" class="item" [routerLink]="['/home']">
+            <!-- <img src="../../assets/images/sblogo.jpg"> -->
+            <div></div>
         </a>
         
         <div class="right menu">
             <div class="ui item" [routerLink]="['/about']">
-                ABOUT
+                <a>ABOUT</a>
             </div>  
             <div class="ui item"[routerLink]="['/work']">
-              WORK
+                <a>WORK</a>
+              
             </div>
             <div class="ui item">
-                <a href="http://daydreamsonvinyl.tumblr.com">
+                <a (click)="goToTumblr()">
                      BLOG
                 </a>
             </div>
         </div>
     </div>
-    <!-- <div>
-        <div id="background" class="ui vertical stripe segment" style="background-image:url('../../assets/images/background.jpg');">
-            
-        </div>
-    </div> -->
-    <!-- <app-home></app-home> -->
-    <!-- <app-body></app-body> -->
     <router-outlet></router-outlet>
-
-
+    <div class="ui vertical stripe segment media">
+        <div class="ui middle aligned stackable grid container">
+            <div class="row">
+                <div class="eight wide column">
+                    <p>@DAYDREAMSONVINYL</p>
+                </div>
+                <div class="six wide right floated column">
+                    <a href="https://github.com/sbesozzi">
+                        <i class="github large icon"></i>
+                    </a>
+    
+                    <a href="https://www.linkedin.com/in/sarahbesozzi">
+                        <i class="linkedin large icon"></i>
+                    </a>
+    
+                    <a href="https://www.instagram.com/daydreamsonvinyl/">
+                        <i class="instagram large icon"></i>
+                    </a>
+                    <a href="http://daydreamsonvinyl.tumblr.com">
+                        <i class="tumblr square large icon"></i>
+                    </a>
+                    <a href="https://www.pinterest.com/sarahbesozzi/">
+                        <i class="pinterest large icon"></i>
+                    </a>
+                    
+    
+                </div>
+            </div>
+        </div>  
+        <div class="ui container">
+            <div class="ui inverted divided equal height stackable grid">
+    
+    
+            </div>
+        </div>
+    </div>
+    <div class="ui inverted vertical footer segment">
+        <div class="ui text container">
+            <h5 class="">SARAH BESOZZI,&nbsp; ATLANTA, GA &nbsp; &nbsp; &nbsp;&nbsp; SARAH.BESOZZI@GMAIL.COM</h5>
+        </div>
+    </div>
 </div>
-
-

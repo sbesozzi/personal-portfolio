@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
     title = 'app';
+
+    public goToTumblr() {
+        window.open('http://daydreamsonvinyl.tumblr.com', '_blank');
+    }
+
 }
+
