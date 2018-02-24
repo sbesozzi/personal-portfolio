@@ -1,5 +1,5 @@
 <div class="app-container">
-    <div class="ui top attached secondary white inverted menu">
+    <div class="ui top attached secondary menu" id="background" style="background-image:url('../../assets/images/background.jpg');">
        
         <a class="item" [routerLink]="['/home']">
             <img src="../../assets/images/sblogo.jpg">
@@ -7,18 +7,23 @@
         
         <div class="right menu">
             <div class="ui item" [routerLink]="['/about']">
-                About
+                ABOUT
             </div>  
             <div class="ui item"[routerLink]="['/work']">
-              Work
+              WORK
             </div>
             <div class="ui item">
                 <a href="http://daydreamsonvinyl.tumblr.com">
-                     Blog
+                     BLOG
                 </a>
             </div>
         </div>
     </div>
+    <!-- <div>
+        <div id="background" class="ui vertical stripe segment" style="background-image:url('../../assets/images/background.jpg');">
+            
+        </div>
+    </div> -->
     <!-- <app-home></app-home> -->
     <!-- <app-body></app-body> -->
     <router-outlet></router-outlet>

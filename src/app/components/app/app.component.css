@@ -3,9 +3,18 @@
 }
 
 .item {
-    color: grey !important;
+    color: white !important;
 }
 
 a {
-    color: grey !important;
+    color: white !important;
+}
+#background {
+    /* background-image: url('../../assets/images/IMG_2535.jpg'); */
+    opacity: 0.7; 
+    background-size: cover;
+}
+
+.menu {
+    height: 22em;
 }
