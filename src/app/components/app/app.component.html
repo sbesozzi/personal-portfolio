@@ -1,0 +1,26 @@
+<div class="app-container">
+    <div class="ui top attached secondary white inverted menu">
+       
+        <a class="item" [routerLink]="['/home']">
+            <!-- <img src="../../../images/sblogo.jpg"> -->
+            img
+        </a>
+        
+        <div class="right menu">
+            <div class="ui item" [routerLink]="['/about']">
+                About
+            </div>  
+            <div class="ui item"[routerLink]="['/work']">
+              Work
+            </div>
+            <div class="ui item">Blog</div>
+        </div>
+    </div>
+    <!-- <app-home></app-home> -->
+    <!-- <app-body></app-body> -->
+    <router-outlet></router-outlet>
+
+
+</div>
+
+
