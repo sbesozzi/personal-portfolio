@@ -8,10 +8,6 @@ import { WorkComponent } from './components/work/work.component';
 export const APP_ROUTES = [
   {
     path: '',
-    component: HomeComponent },
-
-  {
-    path: '',
     redirectTo: '/home',
     pathMatch: 'full'
   },
