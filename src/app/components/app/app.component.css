@@ -3,9 +3,53 @@
 }
 
 .item {
-    color: grey !important;
+    color: white !important;
 }
 
 a {
-    color: grey !important;
+    color: white !important;
+    text-decoration: none !important;
+    cursor: pointer;
 }
+
+#background {
+    /* background-image: url('../../assets/images/IMG_2535.jpg'); */
+    opacity: 0.7; 
+    background-size: cover;
+}
+
+.menu {
+    height: 22em;
+}
+
+.right.menu {
+    padding-bottom: 14em;
+}
+
+.left-menu {
+    padding-top: 1em;
+}
+
+
+.logo {
+    z-index: 2;
+}
+
+.ui.vertical.stripe {
+    padding: 6em 0em !important;
+}
+
+.media {
+    background-color: #F2F2F2 !important;
+}
+
+.ui.vertical.footer {
+    padding: 6em 0em !important;
+}
+
+
+.ui.vertical.footer {
+    padding: 6em 0em !important;
+}
+
+
