@@ -1,23 +1,31 @@
 <div class="app-container">
     <div class="ui top attached secondary stackable menu" id="background" style="background-image:url('../../assets/images/background.jpg');">
+        <div class="left-menu">
+            <div class="ui item logo">
+                <a [routerLink]="['/home']">
+                    <img src="../../assets/images/sblogofull2.jpg">
+                </a>
+            </div>
+        </div>
         
-       
-        <a id="logo" class="item" [routerLink]="['/home']">
-            <!-- <img src="../../assets/images/sblogo.jpg"> -->
-            <div></div>
-        </a>
+        
         
         <div class="right menu">
-            <div class="ui item" [routerLink]="['/about']">
-                <a>ABOUT</a>
+            <div class="ui item">
+                <a [routerLink]="['/about']">ABOUT</a>
             </div>  
-            <div class="ui item"[routerLink]="['/work']">
+            <!-- <div class="ui item"[routerLink]="['/work']">
                 <a>WORK</a>
               
-            </div>
+            </div> -->
             <div class="ui item">
                 <a (click)="goToTumblr()">
                      BLOG
+                </a>
+            </div>
+            <div class="ui item">
+                <a [routerLink]="['/contact']">
+                    CONTACT
                 </a>
             </div>
         </div>
@@ -29,7 +37,7 @@
                 <div class="eight wide column">
                     <p>@DAYDREAMSONVINYL</p>
                 </div>
-                <div class="six wide right floated column">
+                <div class="six wide right floated right aligned column">
                     <a href="https://github.com/sbesozzi">
                         <i class="github large icon"></i>
                     </a>
@@ -59,7 +67,7 @@
             </div>
         </div>
     </div>
-    <div class="ui inverted vertical footer segment">
+    <div class="ui inverted vertical footer center aligned segment">
         <div class="ui text container">
             <h5 class="">SARAH BESOZZI,&nbsp; ATLANTA, GA &nbsp; &nbsp; &nbsp;&nbsp; SARAH.BESOZZI@GMAIL.COM</h5>
         </div>

@@ -26,8 +26,13 @@ a {
     padding-bottom: 14em;
 }
 
-#logo {
-    padding-bottom: 14em;
+.left-menu {
+    padding-top: 1em;
+}
+
+
+.logo {
+    z-index: 2;
 }
 
 .ui.vertical.stripe {
