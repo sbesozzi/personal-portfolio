@@ -1,3 +1,18 @@
 .app-home-container {
     height: 100%;
 }
+.ui.vertical.stripe {
+    padding: 8em 0em !important;
+}
+
+.media {
+    background-color: #F2F2F2 !important;
+}
+
+.ui.vertical.footer {
+    padding: 8em 0em !important;
+}
+
+a {
+    color: black !important;
+}
