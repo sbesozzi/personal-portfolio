@@ -12,9 +12,14 @@ a {
     cursor: pointer;
 }
 
+.icon {
+    color: black !important;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
 #background {
-    /* background-image: url('../../assets/images/IMG_2535.jpg'); */
-    opacity: 0.7; 
+    opacity: 0.8; 
     background-size: cover;
 }
 
@@ -28,11 +33,6 @@ a {
 
 .left-menu {
     padding-top: 1em;
-}
-
-
-.logo {
-    z-index: 2;
 }
 
 .ui.vertical.stripe {
