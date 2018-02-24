@@ -16,3 +16,7 @@
 a {
     color: black !important;
 }
+
+p, h5 {
+    color: grey !important;
+}
