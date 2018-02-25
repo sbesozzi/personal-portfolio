@@ -1,4 +1,4 @@
-# Angular + Semantic UI Starter Project
+# Personal Portfolio with Angular + Semantic UI
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.0.
 
