@@ -11,10 +11,11 @@
             <div class="ui item">
                 <a [routerLink]="['/about']">ABOUT</a>
             </div>  
-            <!-- <div class="ui item"[routerLink]="['/work']">
-                <a>WORK</a>
-              
-            </div> -->
+            <div class="ui item">
+                <a (click)="goToGithub()">
+                    WORK
+                </a>
+            </div>
             <div class="ui item">
                 <a (click)="goToTumblr()">
                      BLOG
@@ -29,12 +30,29 @@
     </div>
     <router-outlet></router-outlet>
     <div class="ui vertical stripe segment media">
-        <div class="ui middle aligned stackable grid container">
+        <div class="ui  stackable grid container">
             <div class="row">
-                <div class="eight wide column">
+                <div class="twelve wide column">
                     <p>@DAYDREAMSONVINYL</p>
+                    <br>
+                    <div class="ui grid stackable">
+                        <div class="row insta-row">
+                            <div class="two wide column" *ngFor="let photo of photos | slice:0:6">
+                                <a href="{{ photo.link }}">
+                                    <img class="insta" src="{{ photo.images.thumbnail.url }}">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row insta-row">
+                            <div class="two wide column" *ngFor="let photo of photos | slice:7:13">
+                                <a href="{{ photo.link }}">
+                                    <img class="insta" src="{{ photo.images.thumbnail.url }}">
+                                </a>
+                            </div>
+                        </div>                
+                    </div>
                 </div>
-                <div class="six wide right floated right aligned column">
+                <div class="three wide right floated right aligned column">
                     <a (click)="goToGithub()">
                         <i class="github large icon"></i>
                     </a>

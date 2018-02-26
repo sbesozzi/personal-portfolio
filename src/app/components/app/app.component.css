@@ -52,4 +52,13 @@ a {
     padding: 6em 0em !important;
 }
 
+.insta {
+    width: 7em;
+}
+
+.insta-row {
+    padding-bottom: 0 !important;
+    padding-top: 6px !important;
+}
+
 

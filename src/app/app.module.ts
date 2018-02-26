@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { HttpModule, JsonpModule } from '@angular/http';
 
 import { SuiModule } from 'ng2-semantic-ui';
 
@@ -16,6 +17,8 @@ import { AppComponent } from './components/app/app.component';
     ],
     imports: [
         BrowserModule,
+        HttpModule,
+        JsonpModule,
         SuiModule,
         RouterModule.forRoot(APP_ROUTES)
     ],
