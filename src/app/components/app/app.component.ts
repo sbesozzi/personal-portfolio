@@ -21,16 +21,12 @@ export class AppComponent implements OnInit {
     ngOnInit() {
         this._instagramService.getFeed().subscribe((data) => {
             this.photos = data.data;
-
-            console.log(this.photos);
-
         },
             err => {
                 console.log('token err: ', err);
             });
 
     }
-
 
     public goToGithub() {
         window.open('https://github.com/sbesozzi', '_blank');
@@ -53,4 +49,3 @@ export class AppComponent implements OnInit {
     }
 
 }
-
