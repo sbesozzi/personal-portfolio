@@ -10,22 +10,22 @@
         <div class="right menu">
             <div class="ui item">
                 <a [routerLink]="['/about']">ABOUT</a>
-            </div>  
+            </div>
+            <div class="ui item">
+                <a (click)="goToTumblr()">
+                    BLOG
+                </a>
+            </div>
             <div class="ui item">
                 <a (click)="goToGithub()">
                     WORK
                 </a>
             </div>
             <div class="ui item">
-                <a (click)="goToTumblr()">
-                     BLOG
-                </a>
-            </div>
-            <div class="ui item">
                 <a [routerLink]="['/contact']">
                     CONTACT
                 </a>
-            </div>
+            </div>    
         </div>
     </div>
     <router-outlet></router-outlet>
@@ -35,24 +35,46 @@
                 <div class="twelve wide column">
                     <p>@DAYDREAMSONVINYL</p>
                     <br>
-                    <div class="ui stackable grid">
-                        <div class="row insta-row">
-                            <div class="two wide column" *ngFor="let photo of photos | slice:0:6">
-                                <a href="{{ photo.link }}">
-                                    <img class="insta" src="{{ photo.images.thumbnail.url }}">
-                                </a>
+                    <div *ngIf="mobileDevice === false">
+                        <div class="ui grid">
+                            <div class="row insta-row">
+                                <div class="two wide column" *ngFor="let photo of photos | slice:0:6">
+                                    <a href="{{ photo.link }}">
+                                        <img class="insta" src="{{ photo.images.thumbnail.url }}">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row insta-row">
+                                <div class="two wide column" *ngFor="let photo of photos | slice:7:13">
+                                    <a href="{{ photo.link }}">
+                                        <img class="insta" src="{{ photo.images.thumbnail.url }}">
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                        <div class="row insta-row">
-                            <div class="two wide column" *ngFor="let photo of photos | slice:7:13">
-                                <a href="{{ photo.link }}">
-                                    <img class="insta" src="{{ photo.images.thumbnail.url }}">
-                                </a>
-                            </div>
-                        </div>                
                     </div>
+                    
+                    <div *ngIf="mobileDevice">
+                        <div class="ui grid">
+                            <div class="row insta-row">
+                                <div class="eight wide column" *ngFor="let photo of photos | slice:0:6">
+                                    <a href="{{ photo.link }}">
+                                        <img class="insta" src="{{ photo.images.thumbnail.url }}">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row insta-row">
+                                <div class="eight wide column" *ngFor="let photo of photos | slice:7:13">
+                                    <a href="{{ photo.link }}">
+                                        <img class="insta" src="{{ photo.images.thumbnail.url }}">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
-                <div class="three wide right floated right aligned column">
+                <div class="three wide right floated right aligned column social">
                     <a (click)="goToGithub()">
                         <i class="github large icon"></i>
                     </a>

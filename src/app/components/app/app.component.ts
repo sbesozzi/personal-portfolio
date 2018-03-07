@@ -10,6 +10,7 @@ import { InstagramService } from '../../services/instagram.service';
 })
 export class AppComponent implements OnInit {
     title = 'app';
+    public mobileDevice: boolean;
     public photos;
 
     constructor(
@@ -19,6 +20,9 @@ export class AppComponent implements OnInit {
     ) { }
 
     ngOnInit() {
+        this.mobileDevice = this.getMobileStatus();
+        console.log(this.mobileDevice);
+
         this._instagramService.getFeed().subscribe((data) => {
             this.photos = data.data;
         },
@@ -26,6 +30,15 @@ export class AppComponent implements OnInit {
                 console.log('token err: ', err);
             });
 
+    }
+
+    public getMobileStatus() {
+        if (this.mobileDevice === undefined) {
+            this.mobileDevice = (window.innerWidth <= 800) ? true : false;
+            return this.mobileDevice;
+        } else {
+            return this.mobileDevice;
+        }
     }
 
     public goToGithub() {
