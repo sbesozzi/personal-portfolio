@@ -7,8 +7,10 @@
         "root": "src",
         "outDir": "dist",
         "assets": [
+        "200.html",
         "assets",
-        "favicon.ico"
+        "favicon.ico",
+        "web.config"
         ],
         "index": "index.html",
         "main": "main.ts",

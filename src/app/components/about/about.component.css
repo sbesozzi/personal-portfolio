@@ -20,3 +20,10 @@ a {
 p, h5 {
     color: grey !important;
 }
+
+/* @media only screen and (max-width: 767px) {
+  .ui.grid>.row>.column>img {
+      text-align: center !important;
+      max-width: 80%;
+  }
+} */

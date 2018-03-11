@@ -1,43 +1,80 @@
 <div class="app-container">
     <div class="ui top attached secondary stackable menu" id="background" style="background-image:url('../../assets/images/background.jpg');">
         <div class="left-menu">
-            <div class="ui item logo">
+            <div class="ui item">
                 <a [routerLink]="['/home']">
                     <img src="../../assets/images/sblogofull2.jpg">
                 </a>
             </div>
         </div>
-        
-        
-        
         <div class="right menu">
             <div class="ui item">
                 <a [routerLink]="['/about']">ABOUT</a>
-            </div>  
-            <!-- <div class="ui item"[routerLink]="['/work']">
-                <a>WORK</a>
-              
-            </div> -->
+            </div>
             <div class="ui item">
                 <a (click)="goToTumblr()">
-                     BLOG
+                    BLOG
+                </a>
+            </div>
+            <div class="ui item">
+                <a (click)="goToGithub()">
+                    WORK
                 </a>
             </div>
             <div class="ui item">
                 <a [routerLink]="['/contact']">
                     CONTACT
                 </a>
-            </div>
+            </div>    
         </div>
     </div>
     <router-outlet></router-outlet>
     <div class="ui vertical stripe segment media">
-        <div class="ui middle aligned stackable grid container">
+        <div class="ui stackable grid container">
             <div class="row">
-                <div class="eight wide column">
+                <div class="twelve wide column">
                     <p>@DAYDREAMSONVINYL</p>
+                    <br>
+                    <div *ngIf="mobileDevice === false">
+                        <div class="ui grid">
+                            <div class="row insta-row">
+                                <div class="two wide column" *ngFor="let photo of photos | slice:0:6">
+                                    <a href="{{ photo.link }}">
+                                        <img class="insta" src="{{ photo.images.thumbnail.url }}">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row insta-row">
+                                <div class="two wide column" *ngFor="let photo of photos | slice:7:13">
+                                    <a href="{{ photo.link }}">
+                                        <img class="insta" src="{{ photo.images.thumbnail.url }}">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div *ngIf="mobileDevice">
+                        <div class="ui grid">
+                            <div class="row insta-row">
+                                <div class="eight wide column" *ngFor="let photo of photos | slice:0:6">
+                                    <a href="{{ photo.link }}">
+                                        <img class="insta" src="{{ photo.images.thumbnail.url }}">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row insta-row">
+                                <div class="eight wide column" *ngFor="let photo of photos | slice:7:13">
+                                    <a href="{{ photo.link }}">
+                                        <img class="insta" src="{{ photo.images.thumbnail.url }}">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
-                <div class="six wide right floated right aligned column">
+                <div class="three wide right floated right aligned column social">
                     <a (click)="goToGithub()">
                         <i class="github large icon"></i>
                     </a>
@@ -55,21 +92,20 @@
                     <a (click)="goToPinterest()">
                         <i class="pinterest large icon"></i>
                     </a>
-                    
-    
                 </div>
             </div>
         </div>  
         <div class="ui container">
-            <div class="ui inverted divided equal height stackable grid">
-    
-    
-            </div>
+            <div class="ui inverted divided equal height stackable grid"></div>
         </div>
     </div>
     <div class="ui inverted vertical footer center aligned segment">
         <div class="ui text container">
-            <h5 class="">SARAH BESOZZI,&nbsp; ATLANTA, GA &nbsp; &nbsp; &nbsp;&nbsp; SARAH.BESOZZI@GMAIL.COM</h5>
+            <h5>SARAH BESOZZI, &nbsp; ATLANTA, GA &nbsp; &nbsp; &nbsp;&nbsp; SARAH.BESOZZI@GMAIL.COM</h5>
+        </div>
+        <br>
+        <div>
+            <span>&copy; 2018 SARAH BESOZZI</span>
         </div>
     </div>
 </div>
