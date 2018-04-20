@@ -40,25 +40,16 @@ a {
 }
 
 .media {
-    background-color: #F2F2F2 !important;
+    /* background-color: #F2F2F2 !important; */
+    border-bottom: none !important;
 }
-
-.ui.vertical.footer {
-    padding: 6em 0em !important;
-}
-
 
 .ui.vertical.footer {
     padding: 6em 0em !important;
 }
 
 .insta {
-    width: 5.8em;
-}
-
-.insta-row {
-    padding-bottom: 0 !important;
-    padding-top: 6px !important;
+    width: 6em;
 }
 
 .media {
@@ -66,12 +57,13 @@ a {
 }
 
 #copyright {
-    margin-bottom: 0 !important; 
+    /* margin-bottom: 0 !important;  */
+    font-size: .8em;
 }
 
 @media only screen and (max-width: 767px) {
   .insta {
-    width: 15em !important;
+    width: 10em !important;
   }
 
   .social {

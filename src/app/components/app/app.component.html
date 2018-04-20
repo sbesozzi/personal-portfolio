@@ -32,43 +32,36 @@
     <div class="ui vertical stripe segment media">
         <div class="ui stackable grid container">
             <div class="row">
-                <div class="twelve wide column">
+                <div class="twelve wide left floated column">
                     <p>@DAYDREAMSONVINYL</p>
                     <br>
                     <div *ngIf="mobileDevice === false">
-                        <div class="ui grid">
-                            <div class="row insta-row">
-                                <div class="two wide column" *ngFor="let photo of photos | slice:0:6">
-                                    <a href="{{ photo.link }}">
-                                        <img class="insta" src="{{ photo.images.thumbnail.url }}">
-                                    </a>
-                                </div>
+                        <div class="ui six column grid">
+                            <div class="column" *ngFor="let photo of photos | slice:0:6">
+                                <a href="{{ photo.link }}">
+                                    <img class="insta" src="{{ photo.images.thumbnail.url }}">
+                                </a>
                             </div>
-                            <div class="row insta-row">
-                                <div class="two wide column" *ngFor="let photo of photos | slice:7:13">
-                                    <a href="{{ photo.link }}">
-                                        <img class="insta" src="{{ photo.images.thumbnail.url }}">
-                                    </a>
-                                </div>
+                            <div class="column" *ngFor="let photo of photos | slice:7:13">
+                                <a href="{{ photo.link }}">
+                                    <img class="insta" src="{{ photo.images.thumbnail.url }}">
+                                </a>
                             </div>
                         </div>
                     </div>
                     
                     <div *ngIf="mobileDevice">
-                        <div class="ui grid">
-                            <div class="row insta-row">
-                                <div class="eight wide column" *ngFor="let photo of photos | slice:0:6">
-                                    <a href="{{ photo.link }}">
-                                        <img class="insta" src="{{ photo.images.thumbnail.url }}">
-                                    </a>
-                                </div>
+                        <div class="ui center aligned grid">
+                            <div class="eight wide column" *ngFor="let photo of photos | slice:0:6">
+                                <a href="{{ photo.link }}">
+                                    <img class="insta" src="{{ photo.images.thumbnail.url }}">
+                                </a>
                             </div>
-                            <div class="row insta-row">
-                                <div class="eight wide column" *ngFor="let photo of photos | slice:7:13">
-                                    <a href="{{ photo.link }}">
-                                        <img class="insta" src="{{ photo.images.thumbnail.url }}">
-                                    </a>
-                                </div>
+                        
+                            <div class="eight wide column" *ngFor="let photo of photos | slice:7:13">
+                                <a href="{{ photo.link }}">
+                                    <img class="insta" src="{{ photo.images.thumbnail.url }}">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -94,18 +87,33 @@
                     </a>
                 </div>
             </div>
+            
+
+            <!-- <div class="row">
+                <div class="sixteen wide column">
+                    <div class="ui text center aligned container">
+                        <br>
+                        <h5>SARAH BESOZZI, &nbsp; ATLANTA, GA &nbsp; &nbsp; &nbsp;&nbsp; SARAH.BESOZZI@GMAIL.COM</h5>
+                        <span>&copy; 2018 SARAH BESOZZI</span>
+                    </div>
+                    <!-- <br>
+                    <div>
+                        
+                    </div>
+                </div>
+            </div> -->
         </div>  
-        <div class="ui container">
+        <!-- <div class="ui container">
             <div class="ui inverted divided equal height stackable grid"></div>
-        </div>
+        </div> -->
     </div>
-    <div class="ui inverted vertical footer center aligned segment">
+    <div class="ui vertical footer center aligned segment">
         <div class="ui text container">
             <h5>SARAH BESOZZI, &nbsp; ATLANTA, GA &nbsp; &nbsp; &nbsp;&nbsp; SARAH.BESOZZI@GMAIL.COM</h5>
         </div>
         <br>
         <div>
-            <span>&copy; 2018 SARAH BESOZZI</span>
+            <span id="copyright">&copy; 2018 SARAH BESOZZI</span>
         </div>
     </div>
 </div>
