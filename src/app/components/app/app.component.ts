@@ -58,7 +58,7 @@ export class AppComponent implements OnInit {
     }
 
     public goToPinterest() {
-        window.open('https://www.pinterest.com/sarahbesozzi/', '_blank');
+        window.open('https://www.pinterest.com/sarahbesozzi/pins/', '_blank');
     }
 
 }
