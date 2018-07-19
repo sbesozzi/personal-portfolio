@@ -61,6 +61,10 @@ a {
     font-size: .8em;
 }
 
+#footer {
+    background-color: #F2F2F2 !important;
+}
+
 @media only screen and (max-width: 767px) {
   .insta {
     width: 10em !important;
