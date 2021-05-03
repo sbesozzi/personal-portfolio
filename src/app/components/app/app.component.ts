@@ -21,14 +21,13 @@ export class AppComponent implements OnInit {
 
     ngOnInit() {
         this.mobileDevice = this.getMobileStatus();
-        console.log(this.mobileDevice);
 
-        this._instagramService.getFeed().subscribe((data) => {
-            this.photos = data.data;
-        },
-            err => {
-                console.log('token err: ', err);
-            });
+        // this._instagramService.getFeed().subscribe((data) => {
+        //     this.photos = data.data;
+        // },
+        //     err => {
+        //         console.log('token err: ', err);
+            // });
 
     }
 
